@@ -7,7 +7,7 @@ pipeline {
     }
 
     stages {
-                        
+       //Stage Serenity BDD Test                 
         stage('AutoTest') {
             steps {
                 // Clean before build
@@ -17,7 +17,8 @@ pipeline {
 		        sh 'docker run --name autoGradle --rm -v /home/ubuntu/PocBcoPopular/jenkins/jenkins_home/workspace/job_popular_pocAutotest_develop:/home/gradle/project -w /home/gradle/project gradle/chrome gradle clean test aggregate'
             }
 	    }
-
+        
+        //Stage Snd report to nginx server
           stage('report') {
             steps {
 		        sh './pipeline/report/report.sh'
