@@ -1,11 +1,19 @@
 pipeline {
 
     agent any
+      options {
+        // This is required if you want to clean before build
+        skipDefaultCheckout(true)
+    }
 
     stages {
                         
         stage('AutoTest') {
             steps {
+                // Clean before build
+                cleanWs()
+                 // We need to explicitly checkout from SCM here
+                checkout scm
 		        sh 'docker run --name autoGradle --rm -v /home/ubuntu/PocBcoPopular/jenkins/jenkins_home/workspace/job_popular_pocAutotest_develop:/home/gradle/project -w /home/gradle/project gradle/chrome gradle clean test aggregate'
             }
 	    }
