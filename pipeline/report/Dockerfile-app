@@ -11,6 +11,6 @@ RUN apk upgrade
 
 ## From ‘builder’ stage copy over the artifacts in dist folder to default nginx public folder
 
-COPY target/site/serenity/* /usr/share/nginx/html
+COPY target/site/serenity/* /usr/share/nginx/html/
 
 CMD ["nginx", "-g", "daemon off;"]

@@ -8,4 +8,4 @@ echo "########################################################"
 echo "*** (BUILD)Enviando  Reporte serenity TrainingSiteJSP***"
 echo "########################################################"
 
-cd pipeline/report/ && docker-compose -f docker-compose-build.yml build --no-cache
+cd pipeline/report/ && docker-compose -f docker-compose-build.yml up -d
