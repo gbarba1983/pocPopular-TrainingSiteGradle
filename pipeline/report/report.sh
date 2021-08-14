@@ -2,7 +2,7 @@
 
 # Copia el war
 
-cp -f target/ pipeline/report/
+cp -rf target/ pipeline/report/
 
 echo "########################################################"
 echo "*** (BUILD)Enviando  Reporte serenity TrainingSiteJSP***"
