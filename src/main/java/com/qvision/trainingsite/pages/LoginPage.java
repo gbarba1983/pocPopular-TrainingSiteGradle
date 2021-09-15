@@ -6,7 +6,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.thucydides.core.annotations.DefaultUrl;
 
-@DefaultUrl("http://137.135.82.220:8888/TrainingSite-1.0-SNAPSHOT/index.jsp")
+@DefaultUrl("http://3.233.80.188/TrainingSite-1.0-SNAPSHOT/")
 public class LoginPage extends PageObject {
 	
 	@FindBy(name = "user")
