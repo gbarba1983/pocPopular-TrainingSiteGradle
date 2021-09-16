@@ -14,8 +14,8 @@ pipeline {
                 cleanWs()
                  // We need to explicitly checkout from SCM here
                 checkout scm
-             sh 'docker stop serenity_report'
-             sh 'docker rm serenity_report'   
+             sh 'docker stop serenity_report_training'
+             sh 'docker rm serenity_report_training'   
 		        sh 'docker run --name autoGradle --rm -v /home/ubuntu/PocBcoPopular/jenkins/jenkins_home/workspace/$JOB_BASE_NAME:/home/gradle/project -w /home/gradle/project gradle/chrome gradle clean test aggregate'
             }
 	    }

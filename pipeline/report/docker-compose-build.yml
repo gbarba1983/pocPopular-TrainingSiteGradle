@@ -1,8 +1,8 @@
 version: '3'
 services:
   serenity_report:
-    container_name: serenity_report
-    image: "report:$BUILD_NUMBER"
+    container_name: serenity_report_training
+    image: "report_training:$BUILD_NUMBER"
     build:
       context: .
       dockerfile: Dockerfile-app
