@@ -1,6 +1,6 @@
 version: '3'
 services:
-  serenity_report:
+  serenity_report_training:
     container_name: serenity_report_training
     image: "report_training:$BUILD_NUMBER"
     build:

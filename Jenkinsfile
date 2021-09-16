@@ -38,5 +38,8 @@ pipeline {
                     patterns: [[pattern: '.gitignore', type: 'INCLUDE'],
                                [pattern: '.propsfile', type: 'EXCLUDE']])
         }
+     //    success {
+       //     publishTestResults autoCreateTestCases: true, filePath: 'zephyrscale_result.json', format: 'Cucumber', projectKey: '241a667a-da22-45b4-af39-4d4625964ef4', serverAddress: 'https://prototipo001.atlassian.net'
+        //}
     }
 }
